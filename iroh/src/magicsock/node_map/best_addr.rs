@@ -6,7 +6,7 @@ use n0_future::time::{Duration, Instant};
 use tracing::{debug, info};
 
 /// How long we trust a UDP address as the exclusive path (without using relay) without having heard a Pong reply.
-const TRUST_UDP_ADDR_DURATION: Duration = Duration::from_millis(6500);
+const TRUST_UDP_ADDR_DURATION: Duration = Duration::from_secs(120);
 
 #[derive(Debug, Default)]
 pub(super) struct BestAddr(Option<BestAddrInner>);
